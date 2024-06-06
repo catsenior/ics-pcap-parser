@@ -107,8 +107,7 @@ def filter_opc_ua_packets(input_pcap, pkt_layer, protocol, port_num, display_fil
         pkt_data['srcport'] = src_port_num
         pkt_data['destport'] = dest_port_num
 
-
-        if dest_port_num not in port_num:
+        if dest_port_num in port_num:
             direction = "query"
             pkt_data['direction'] = direction
         else:
